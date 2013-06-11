@@ -24,6 +24,7 @@ module GoogleAjaxCrawler
         begin
           puts "::requesting: #{uri}"
           visit uri.to_s
+          binding.pry
           wait_until_page_is_fully_loaded
         rescue Timeout::Error
           puts  "-- Page Rendering Timed out: --\n"\
